@@ -1,0 +1,3100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="tool">
+  <meta name="design-style" content="sticker">
+  <title>Grade 4 English Screening Test — Interactive Reading Practice (110–115)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces */
+      --background: #fef7ff;
+      --surface-container-low: #ffffff;
+      --surface-container: #f8eef8;
+      --surface-container-high: #f2e8f2;
+
+      /* Ink */
+      --on-surface: #2e1a28;
+      --on-surface-variant: #604868;
+
+      /* Rules */
+      --outline: #907898;
+      --outline-variant: #dcc8e0;
+
+      /* Accents */
+      --primary: #c2207f;
+      --on-primary: #ffffff;
+      --primary-container: #f080c0;
+      --on-primary-container: #2e1a28;
+      --secondary: #7c52aa;
+      --tertiary: #0096cc;
+      --error: #c53030;
+      --on-error: #ffffff;
+
+      /* Semantic */
+      --positive: #138856;
+      --positive-bg: #e6f6ee;
+      --warning: #b45309;
+      --warning-bg: #fef3c7;
+      --error-bg: #fee2e2;
+      --focus: #c2207f;
+
+      /* Data series */
+      --data-1: #c2207f;
+      --data-2: #7c52aa;
+      --data-3: #0096cc;
+      --data-4: #d96a00;
+      --data-context: #c8b8d0;
+
+      /* Fonts */
+      --font-headline: 'DM Sans', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-label: 'DM Sans', sans-serif;
+
+      /* Type Scale (Tool) */
+      --display-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+      --headline-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+      --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+      --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+      --label-size: 0.75rem;
+
+      /* Spacing Scale */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      /* Shape */
+      --rounded: 1rem;
+      --rounded-lg: 1.5rem;
+      --rounded-full: 9999px;
+
+      /* Style effects */
+      --shadow-pink: 0 6px 20px rgba(194, 32, 127, 0.12);
+      --shadow-pink-deep: 0 10px 28px rgba(194, 32, 127, 0.24);
+      --shadow-grape: 0 6px 20px rgba(124, 82, 170, 0.12);
+      --shadow-sky: 0 6px 20px rgba(0, 150, 204, 0.14);
+      --pop-scale: scale(1.025);
+      --lift: translateY(-3px);
+      --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Layout Container */
+    .app-shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: var(--space-md) var(--space-md) var(--space-3xl);
+    }
+    .app-shell * { min-width: 0; }
+
+    /* Header Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #ffffff 0%, var(--surface-container) 100%);
+      border: 2px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-xl) var(--space-lg);
+      margin-bottom: var(--space-lg);
+      box-shadow: var(--shadow-pink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background-color: var(--surface-container-high);
+      color: var(--secondary);
+      font-size: var(--label-size);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: var(--display-size);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--on-surface);
+      margin: 0 0 var(--space-sm);
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      color: var(--on-surface-variant);
+      max-width: 78ch;
+      margin: 0 0 var(--space-md);
+      font-size: var(--body-size);
+    }
+
+    /* Top Stats Grid */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .stat-card {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      box-shadow: var(--shadow-pink);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .stat-card:nth-child(2) { box-shadow: var(--shadow-sky); }
+    .stat-card:nth-child(3) { box-shadow: var(--shadow-grape); }
+    .stat-card:nth-child(4) { box-shadow: var(--shadow-pink); }
+
+    .stat-label {
+      font-size: var(--label-size);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--on-surface-variant);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-value {
+      font-family: var(--font-headline);
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--on-surface);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-sub {
+      font-size: 0.8rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Control Toolbar */
+    .control-toolbar {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      box-shadow: var(--shadow-grape);
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      align-items: center;
+    }
+
+    .year-btn {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded-full);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      cursor: pointer;
+      transition: transform var(--dur-short) var(--ease-bounce),
+                  background-color var(--dur-short) var(--ease-out),
+                  color var(--dur-short) var(--ease-out),
+                  box-shadow var(--dur-short) var(--ease-out);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 40px;
+    }
+    .year-btn:hover {
+      transform: var(--pop-scale);
+      background: var(--surface-container);
+    }
+    .year-btn:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .year-btn.active {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-pink);
+    }
+
+    .filter-select {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-md);
+      border-radius: var(--rounded-full);
+      border: 1px solid var(--outline);
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      cursor: pointer;
+      min-height: 40px;
+    }
+    .filter-select:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .action-btn {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded-full);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform var(--dur-short) var(--ease-bounce), box-shadow var(--dur-short) var(--ease-out);
+      min-height: 40px;
+    }
+    .action-btn:hover {
+      transform: var(--pop-scale);
+    }
+    .action-btn:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .btn-secondary {
+      background: var(--surface-container);
+      color: var(--secondary);
+      border: 1px solid var(--outline-variant);
+    }
+    .btn-primary-pop {
+      background: var(--secondary);
+      color: #ffffff;
+      box-shadow: var(--shadow-grape);
+    }
+    .btn-outline-danger {
+      background: var(--surface-container-low);
+      color: var(--error);
+      border: 1px solid var(--error);
+    }
+
+    /* Main Grid Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Sidebar Navigator */
+    .sidebar-panel {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sky);
+      position: sticky;
+      top: var(--space-md);
+    }
+
+    .sidebar-title {
+      font-family: var(--font-headline);
+      font-size: var(--subhead-size);
+      font-weight: 800;
+      margin: 0 0 var(--space-xs);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sidebar-desc {
+      font-size: 0.825rem;
+      color: var(--on-surface-variant);
+      margin: 0 0 var(--space-md);
+    }
+
+    .nav-pills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+
+    .nav-num-pill {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-headline);
+      font-size: 0.85rem;
+      font-weight: 800;
+      border-radius: var(--rounded);
+      border: 1.5px solid var(--outline-variant);
+      background: var(--surface-container);
+      color: var(--on-surface);
+      cursor: pointer;
+      position: relative;
+      transition: transform var(--dur-short) var(--ease-bounce), border-color var(--dur-short) var(--ease-out);
+    }
+    .nav-num-pill:hover {
+      transform: var(--pop-scale);
+      border-color: var(--primary);
+    }
+    .nav-num-pill:focus-visible {
+      outline: 2px solid var(--focus);
+    }
+    .nav-num-pill.correct {
+      background: var(--positive-bg);
+      border-color: var(--positive);
+      color: var(--positive);
+    }
+    .nav-num-pill.incorrect {
+      background: var(--error-bg);
+      border-color: var(--error);
+      color: var(--error);
+    }
+    .nav-num-pill.bookmarked::after {
+      content: '★';
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      font-size: 0.65rem;
+      color: var(--warning);
+    }
+
+    .nav-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.775rem;
+      color: var(--on-surface-variant);
+      padding-top: var(--space-sm);
+      border-top: 1px dashed var(--outline-variant);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* Question Cards Area */
+    .question-stream {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .question-card {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-xl) var(--space-lg);
+      box-shadow: var(--shadow-pink);
+      position: relative;
+      transition: transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out);
+    }
+    .question-card:hover {
+      box-shadow: var(--shadow-pink-deep);
+    }
+    .question-card:nth-child(even) {
+      box-shadow: var(--shadow-sky);
+    }
+
+    .q-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--outline-variant);
+    }
+
+    .q-badge-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .chip-year {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: var(--rounded-full);
+      letter-spacing: 0.04em;
+    }
+
+    .chip-qnum {
+      background: var(--surface-container-high);
+      color: var(--on-surface);
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: var(--rounded-full);
+    }
+
+    .chip-topic {
+      background: var(--surface-container);
+      color: var(--secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: var(--rounded-full);
+    }
+
+    .q-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .icon-btn {
+      background: transparent;
+      border: 1px solid var(--outline-variant);
+      color: var(--on-surface-variant);
+      width: 34px;
+      height: 34px;
+      border-radius: var(--rounded-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .icon-btn:hover {
+      background: var(--surface-container);
+      color: var(--primary);
+    }
+    .icon-btn.active-star {
+      color: var(--warning);
+      border-color: var(--warning);
+      background: var(--warning-bg);
+    }
+    .icon-btn:focus-visible {
+      outline: 2px solid var(--focus);
+    }
+
+    /* Question Content */
+    .q-stem-wrapper {
+      margin-bottom: var(--space-md);
+    }
+
+    .q-type-instruction {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+    }
+
+    .q-text {
+      font-family: var(--font-headline);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--on-surface);
+      margin: 0;
+    }
+
+    /* Visual prompt container */
+    .prompt-box {
+      margin: var(--space-md) 0;
+      padding: var(--space-md);
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+    }
+
+    .prompt-dialogue {
+      background: #ffffff;
+      border: 1.5px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .dialogue-speaker {
+      font-weight: 800;
+      color: var(--secondary);
+      margin-right: 6px;
+    }
+
+    /* Options List */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      background: var(--surface-container-low);
+      border: 2px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--on-surface);
+      text-align: left;
+      cursor: pointer;
+      transition: transform var(--dur-short) var(--ease-bounce),
+                  border-color var(--dur-short) var(--ease-out),
+                  background-color var(--dur-short) var(--ease-out);
+      width: 100%;
+    }
+    .option-btn:hover {
+      transform: var(--pop-scale);
+      border-color: var(--primary);
+      background: var(--surface-container);
+    }
+    .option-btn:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-container-high);
+      color: var(--on-surface);
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+
+    .opt-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* States for Options */
+    .option-btn.selected {
+      border-color: var(--primary);
+      background: var(--surface-container);
+    }
+    .option-btn.selected .opt-badge {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .option-btn.correct-state {
+      border-color: var(--positive) !important;
+      background: var(--positive-bg) !important;
+      color: var(--positive) !important;
+    }
+    .option-btn.correct-state .opt-badge {
+      background: var(--positive) !important;
+      color: #ffffff !important;
+    }
+
+    .option-btn.incorrect-state {
+      border-color: var(--error) !important;
+      background: var(--error-bg) !important;
+      color: var(--error) !important;
+    }
+    .option-btn.incorrect-state .opt-badge {
+      background: var(--error) !important;
+      color: #ffffff !important;
+    }
+
+    /* Explanation Accordion / Drawer */
+    .explanation-panel {
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      margin-top: var(--space-sm);
+      display: none;
+      animation: fadeIn var(--dur-short) var(--ease-out);
+    }
+    .explanation-panel.visible {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .exp-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: var(--space-xs);
+    }
+    .exp-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--on-surface);
+    }
+    .exp-row {
+      margin-bottom: 4px;
+    }
+    .exp-key {
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    /* Empty state */
+    .empty-state-card {
+      background: var(--surface-container-low);
+      border: 2px dashed var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: var(--space-2xl) var(--space-lg);
+      text-align: center;
+      box-shadow: var(--shadow-grape);
+    }
+    .empty-icon {
+      color: var(--secondary);
+      margin-bottom: var(--space-sm);
+    }
+
+    /* Category Tag Colors */
+    .cat-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: var(--rounded-full);
+      font-size: 0.725rem;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .app-footer {
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+      border-top: 2px dashed var(--outline-variant);
+      text-align: center;
+      color: var(--on-surface-variant);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .app-shell {
+        padding: var(--space-sm) var(--space-sm) var(--space-xl);
+      }
+      .hero-banner {
+        padding: var(--space-lg) var(--space-md);
+      }
+      .control-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .pill-group {
+        justify-content: center;
+      }
+      .sidebar-panel {
+        position: static;
+      }
+      .option-btn {
+        padding: var(--space-sm) var(--space-md);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="badge-pill">
+        <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+        Taiwan Elementary Remedial Learning Assessment
+      </div>
+      <h1 class="hero-title">
+        Grade 4 English Screening Test: <em>Reading Practice</em>
+      </h1>
+      <p class="hero-subtitle">
+        Explore and master all 6 years (110, 111, 112, 113, 114, 115) of Ministry of Education Grade 4 English Screening Tests — Reading Comprehension Section (Questions 11 to 25, 90 questions in total). Practice with immediate feedback, detailed bilingual explanations, audio pronunciation, and real-time score tracking.
+      </p>
+
+      <!-- Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-card">
+          <div class="stat-label">
+            <i data-lucide="check-circle-2" style="width: 14px; height: 14px; color: var(--positive);"></i>
+            Current Score
+          </div>
+          <div class="stat-value" id="stat-score">0 / 15</div>
+          <div class="stat-sub" id="stat-accuracy">0% Accuracy</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">
+            <i data-lucide="layers" style="width: 14px; height: 14px; color: var(--tertiary);"></i>
+            Completed
+          </div>
+          <div class="stat-value" id="stat-completed">0 / 15</div>
+          <div class="stat-sub" id="stat-remaining">15 questions left</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">
+            <i data-lucide="award" style="width: 14px; height: 14px; color: var(--secondary);"></i>
+            Remedial Benchmark
+          </div>
+          <div class="stat-value" id="stat-benchmark">Needs Work</div>
+          <div class="stat-sub">Pass threshold: 60%</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">
+            <i data-lucide="star" style="width: 14px; height: 14px; color: var(--warning);"></i>
+            Bookmarked
+          </div>
+          <div class="stat-value" id="stat-starred">0</div>
+          <div class="stat-sub">Saved for review</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Toolbar: Year Selection, Filters & Mode -->
+    <div class="control-toolbar">
+      <div class="pill-group" role="tablist" aria-label="Select Test Year">
+        <button class="year-btn active" onclick="switchYear('110')" id="year-btn-110">110 Year (2021)</button>
+        <button class="year-btn" onclick="switchYear('111')" id="year-btn-111">111 Year (2022)</button>
+        <button class="year-btn" onclick="switchYear('112')" id="year-btn-112">112 Year (2023)</button>
+        <button class="year-btn" onclick="switchYear('113')" id="year-btn-113">113 Year (2024)</button>
+        <button class="year-btn" onclick="switchYear('114')" id="year-btn-114">114 Year (2025)</button>
+        <button class="year-btn" onclick="switchYear('115')" id="year-btn-115">115 Year (2026)</button>
+        <button class="year-btn" onclick="switchYear('all')" id="year-btn-all">All 90 Questions</button>
+      </div>
+
+      <div class="pill-group">
+        <label for="filter-status" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Filter Questions</label>
+        <select id="filter-status" class="filter-select" onchange="applyFilters()">
+          <option value="all">Show All Questions</option>
+          <option value="incorrect">Mistakes Only (錯題重練)</option>
+          <option value="unanswered">Unanswered Only</option>
+          <option value="bookmarked">Bookmarked (★)</option>
+          <option value="vocab">Vocabulary (Q11–Q17)</option>
+          <option value="sentence">Sentences & Reading (Q18–Q25)</option>
+        </select>
+
+        <button class="action-btn btn-secondary" onclick="toggleInstantFeedback()" id="btn-feedback-mode" title="Toggle immediate answer reveal">
+          <i data-lucide="zap" style="width: 14px; height: 14px;"></i>
+          <span>Instant: ON</span>
+        </button>
+
+        <button class="action-btn btn-outline-danger" onclick="resetCurrentYearProgress()" title="Clear answers for current view">
+          <i data-lucide="rotate-ccw" style="width: 14px; height: 14px;"></i>
+          <span>Reset</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Workspace Grid -->
+    <main class="main-grid">
+      <!-- Left Sidebar Question Navigation & Summary -->
+      <aside class="sidebar-panel">
+        <div class="sidebar-title">
+          <span>Question Navigator</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary);" id="sidebar-counter">15 Items</span>
+        </div>
+        <p class="sidebar-desc">
+          Click any number pill below to jump straight to the question.
+        </p>
+
+        <!-- Navigator Pills -->
+        <div class="nav-pills-grid" id="nav-pills-container">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="nav-legend">
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--surface-container-high); border: 1.5px solid var(--outline-variant);"></span>
+            <span>Unanswered</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--positive-bg); border: 1.5px solid var(--positive);"></span>
+            <span>Correct Answer</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: var(--error-bg); border: 1.5px solid var(--error);"></span>
+            <span>Incorrect Answer</span>
+          </div>
+          <div class="legend-item">
+            <span style="color: var(--warning); font-weight: 800; font-size: 0.9rem;">★</span>
+            <span>Saved in Starred List</span>
+          </div>
+        </div>
+
+        <!-- Quick Action inside sidebar -->
+        <div style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px dashed var(--outline-variant);">
+          <button class="action-btn btn-primary-pop" style="width: 100%; justify-content: center;" onclick="revealAllExplanations()">
+            <i data-lucide="book-open" style="width: 15px; height: 15px;"></i>
+            <span>Reveal All Explanations</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Right Column: Interactive Questions Stream -->
+      <section class="question-stream" id="question-list-container">
+        <!-- Questions injected via JS -->
+      </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="app-footer">
+      <p>
+        Aligned with the Taiwan Ministry of Education Elementary School Remedial Learning Curriculum Standards (國教署國民小學英語科學習扶助基本學習內容標準化評量).
+      </p>
+      <p style="margin-top: 4px; font-size: 0.775rem;">
+        Complete Reading Comprehension Bank: Years 110 (2021), 111 (2022), 112 (2023), 113 (2024), 114 (2025), and 115 (2026).
+      </p>
+    </footer>
+
+  </div>
+
+  <api-shim></api-shim>
+  <script>
+    /* ========================================================================
+       QUESTION DATABASE: 6 Years × 15 Questions = 90 Complete Test Items
+       Format: Grade 4 English Screening Test (Questions 11 to 25)
+       Options: 3 choices per question, exactly matching the 3-option MoE standard.
+       ======================================================================== */
+    const QUESTION_BANK = [
+      // ----------------------------------------------------
+      // YEAR 110 (2021) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "110-11",
+        year: "110",
+        num: 11,
+        part: "vocab",
+        category: "Phonics & Words",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A warm cup of hot beverage / tea]",
+        visualType: "svg-tea",
+        options: [
+          "(1) tea",
+          "(2) ten",
+          "(3) red"
+        ],
+        answer: 1,
+        explanation: "The picture displays a cup of hot tea. 'tea' means 茶. 'ten' is 十, 'red' is 紅色. The correct answer is (1)."
+      },
+      {
+        id: "110-12",
+        year: "110",
+        num: 12,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A bird flying in the sky]",
+        visualType: "svg-bird",
+        options: [
+          "(1) bear",
+          "(2) bird",
+          "(3) book"
+        ],
+        answer: 2,
+        explanation: "'bird' means 鳥. 'bear' is 熊, 'book' is 書本. The image clearly depicts a bird. Correct answer is (2)."
+      },
+      {
+        id: "110-13",
+        year: "110",
+        num: 13,
+        part: "vocab",
+        category: "School Supplies",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [An eraser / rubber used for pencil marks]",
+        visualType: "svg-eraser",
+        options: [
+          "(1) eraser",
+          "(2) yellow",
+          "(3) seven"
+        ],
+        answer: 1,
+        explanation: "'eraser' means 橡皮擦. 'yellow' is 黃色, 'seven' is 七. Correct answer is (1)."
+      },
+      {
+        id: "110-14",
+        year: "110",
+        num: 14,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A slice of delicious birthday cake with a candle]",
+        visualType: "svg-cake",
+        options: [
+          "(1) cat",
+          "(2) cake",
+          "(3) cook"
+        ],
+        answer: 2,
+        explanation: "'cake' means 蛋糕. Phonics pattern: silent 'e' makes 'a' say its long name /eɪ/. Correct answer is (2)."
+      },
+      {
+        id: "110-15",
+        year: "110",
+        num: 15,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the apples: [🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎] (Eight apples)",
+        visualType: "svg-eight",
+        options: [
+          "(1) five",
+          "(2) eight",
+          "(3) nine"
+        ],
+        answer: 2,
+        explanation: "There are 8 items in the illustration. 'eight' means 八. 'five' is 5, 'nine' is 9. Correct answer is (2)."
+      },
+      {
+        id: "110-16",
+        year: "110",
+        num: 16,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the boy swimming in the pool: [A boy performing swimming strokes]",
+        visualType: "svg-swim",
+        options: [
+          "(1) swim",
+          "(2) sing",
+          "(3) sleep"
+        ],
+        answer: 1,
+        explanation: "'swim' means 游泳. 'sing' is 唱歌, 'sleep' is 睡覺. Initial blend 'sw-'. Correct answer is (1)."
+      },
+      {
+        id: "110-17",
+        year: "110",
+        num: 17,
+        part: "vocab",
+        category: "Colors & Shapes",
+        type: "Word Identification",
+        stem: "Look at the color swatch: [A vivid bright yellow paint splash]",
+        visualType: "svg-yellow",
+        options: [
+          "(1) blue",
+          "(2) red",
+          "(3) yellow"
+        ],
+        answer: 3,
+        explanation: "'yellow' means 黃色. 'blue' is 藍色, 'red' is 紅色. Correct answer is (3)."
+      },
+      {
+        id: "110-18",
+        year: "110",
+        num: 18,
+        part: "sentence",
+        category: "Sentences & Daily Life",
+        type: "Sentence Identification",
+        stem: "Read the sentence and choose the matching illustration:\n'The cat is under the table.'",
+        dialogue: null,
+        options: [
+          "(1) A cat sitting on top of a chair",
+          "(2) A cat resting under a wooden table",
+          "(3) A dog running behind a tree"
+        ],
+        answer: 2,
+        explanation: "'The cat is under the table.' (貓咪在桌子下面). Preposition 'under' means 在…下方. Option (2) matches perfectly."
+      },
+      {
+        id: "110-19",
+        year: "110",
+        num: 19,
+        part: "sentence",
+        category: "Sentences & Daily Life",
+        type: "Sentence Identification",
+        stem: "Read the sentence and choose the matching situation:\n'I want three bananas, please.'",
+        dialogue: null,
+        options: [
+          "(1) A child holding three yellow bananas at a fruit stand",
+          "(2) A girl eating two red apples",
+          "(3) A boy buying four oranges"
+        ],
+        answer: 1,
+        explanation: "'I want three bananas, please.' (我想要三根香蕉，謝謝). Matches (1) with three bananas."
+      },
+      {
+        id: "110-20",
+        year: "110",
+        num: 20,
+        part: "sentence",
+        category: "Ability & Animals",
+        type: "Sentence Identification",
+        stem: "Read the sentence and choose the correct description:\n'The bird can dance. The dog can swim.'",
+        dialogue: null,
+        options: [
+          "(1) A flying fish and a running tiger",
+          "(2) A dancing bird alongside a dog swimming in water",
+          "(3) A cat climbing up a wall"
+        ],
+        answer: 2,
+        explanation: "Sentence states: 'The bird can dance. The dog can swim.' Option (2) accurately depicts both actions."
+      },
+      {
+        id: "110-21",
+        year: "110",
+        num: 21,
+        part: "sentence",
+        category: "Weather & Dialogue",
+        type: "Dialogue Comprehension",
+        stem: "Read the dialogue and choose the best response:",
+        dialogue: "A: How is the weather today?\nB: It is sunny and warm.",
+        options: [
+          "(1) It is raining heavily outside",
+          "(2) A bright sunny day with children playing in warm sunshine",
+          "(3) A snowy cold winter night"
+        ],
+        answer: 2,
+        explanation: "B says: 'It is sunny and warm.' (天氣晴朗而且溫暖). Option (2) depicts bright sun and warm weather."
+      },
+      {
+        id: "110-22",
+        year: "110",
+        num: 22,
+        part: "sentence",
+        category: "Descriptions",
+        type: "Sentence Comprehension",
+        stem: "Read the sentence:\n'I see a big black fish. It is swimming happily.'\nWhich picture matches the sentence?",
+        dialogue: null,
+        options: [
+          "(1) A small red bird sitting on a branch",
+          "(2) A little white rabbit eating grass",
+          "(3) A big black fish swimming in the pond"
+        ],
+        answer: 3,
+        explanation: "Key descriptors: 'big' (大), 'black' (黑色), 'fish' (魚). Option (3) is the big black fish."
+      },
+      {
+        id: "110-23",
+        year: "110",
+        num: 23,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A girl wearing a warm winter coat and shivering with snowflakes falling]. Choose the most suitable sentence:",
+        visualType: "svg-cold",
+        options: [
+          "(1) It's cold and snowy.",
+          "(2) It's hot and sunny.",
+          "(3) She is eating an ice cream."
+        ],
+        answer: 1,
+        explanation: "The picture shows winter snow and shivering in a coat, representing 'It's cold and snowy.' (天氣寒冷且下雪). Option (1)."
+      },
+      {
+        id: "110-24",
+        year: "110",
+        num: 24,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A classroom clock pointing straight to 3:00]. Choose the correct sentence:",
+        visualType: "svg-clock3",
+        options: [
+          "(1) It is seven o'clock.",
+          "(2) It is three o'clock.",
+          "(3) It is ten o'clock."
+        ],
+        answer: 2,
+        explanation: "The short hour hand points to 3 and the long minute hand points to 12. 'It is three o'clock.' (現在是三點鐘). Option (2)."
+      },
+      {
+        id: "110-25",
+        year: "110",
+        num: 25,
+        part: "sentence",
+        category: "Passage & Dialogue",
+        type: "Reading Comprehension",
+        stem: "Read the note and answer the question:\n'Hi, I am Kevin. I can swim, but I cannot sing. My sister May can sing, but she cannot dance.'\nWhich statement is TRUE?",
+        dialogue: null,
+        options: [
+          "(1) Kevin can swim. He can't sing.",
+          "(2) May can dance. She can't sing.",
+          "(3) Kevin and May both can dance."
+        ],
+        answer: 1,
+        explanation: "According to Kevin's statement: 'I can swim, but I cannot sing.' This directly matches option (1): 'Kevin can swim. He can't sing.' (凱文會游泳，他不會唱歌)."
+      },
+
+      // ----------------------------------------------------
+      // YEAR 111 (2022) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "111-11",
+        year: "111",
+        num: 11,
+        part: "vocab",
+        category: "Phonics & Words",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A wooden pencil for writing]",
+        visualType: "svg-pencil",
+        options: [
+          "(1) pen",
+          "(2) pencil",
+          "(3) ruler"
+        ],
+        answer: 2,
+        explanation: "'pencil' means 鉛筆. 'pen' is 原子筆/鋼筆, 'ruler' is 尺. The eraser on the top indicates a pencil. Correct answer is (2)."
+      },
+      {
+        id: "111-12",
+        year: "111",
+        num: 12,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A friendly playful dog wagging its tail]",
+        visualType: "svg-dog",
+        options: [
+          "(1) duck",
+          "(2) dog",
+          "(3) pig"
+        ],
+        answer: 2,
+        explanation: "'dog' means 狗. 'duck' is 鴨子, 'pig' is 豬. Initial sound /d/, vowel /ɒ/, ending /ɡ/. Correct answer is (2)."
+      },
+      {
+        id: "111-13",
+        year: "111",
+        num: 13,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A bowl of steaming white rice]",
+        visualType: "svg-rice",
+        options: [
+          "(1) rice",
+          "(2) red",
+          "(3) run"
+        ],
+        answer: 1,
+        explanation: "'rice' means 米飯. 'red' is 紅色, 'run' is 跑步. Correct answer is (1)."
+      },
+      {
+        id: "111-14",
+        year: "111",
+        num: 14,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the stars: [★ ★ ★ ★ ★] (Five stars)",
+        visualType: "svg-five",
+        options: [
+          "(1) four",
+          "(2) five",
+          "(3) six"
+        ],
+        answer: 2,
+        explanation: "There are 5 stars. 'five' means 五. 'four' is 4, 'six' is 6. Correct answer is (2)."
+      },
+      {
+        id: "111-15",
+        year: "111",
+        num: 15,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the picture: [A student holding a book and reading intently]",
+        visualType: "svg-read",
+        options: [
+          "(1) read",
+          "(2) run",
+          "(3) ride"
+        ],
+        answer: 1,
+        explanation: "'read' means 閱讀/看書. 'run' is 跑步, 'ride' is 騎乘. Correct answer is (1)."
+      },
+      {
+        id: "111-16",
+        year: "111",
+        num: 16,
+        part: "vocab",
+        category: "Family & People",
+        type: "Word Identification",
+        stem: "Look at the picture: [A smiling young girl with pigtails]",
+        visualType: "svg-girl",
+        options: [
+          "(1) boy",
+          "(2) girl",
+          "(3) goat"
+        ],
+        answer: 2,
+        explanation: "'girl' means 女孩. 'boy' is 男孩, 'goat' is 山羊. Phonogram '-irl'. Correct answer is (2)."
+      },
+      {
+        id: "111-17",
+        year: "111",
+        num: 17,
+        part: "vocab",
+        category: "Colors & Shapes",
+        type: "Word Identification",
+        stem: "Look at the color patch: [Deep ocean blue]",
+        visualType: "svg-blue",
+        options: [
+          "(1) blue",
+          "(2) black",
+          "(3) brown"
+        ],
+        answer: 1,
+        explanation: "'blue' means 藍色. 'black' is 黑色, 'brown' is 棕色. Correct answer is (1)."
+      },
+      {
+        id: "111-18",
+        year: "111",
+        num: 18,
+        part: "sentence",
+        category: "Sentences & Daily Life",
+        type: "Dialogue Completion",
+        stem: "Read the conversation and choose the correct question:",
+        dialogue: "A: ______________?\nB: I am ten years old.",
+        options: [
+          "(1) What is your name?",
+          "(2) How old are you?",
+          "(3) Where do you live?"
+        ],
+        answer: 2,
+        explanation: "B answers with age: 'I am ten years old.' Therefore, A must ask 'How old are you?' (你幾歲？). Option (2)."
+      },
+      {
+        id: "111-19",
+        year: "111",
+        num: 19,
+        part: "sentence",
+        category: "Ability & Actions",
+        type: "Dialogue Completion",
+        stem: "Choose the proper response to complete the dialogue:",
+        dialogue: "A: Can you draw a cute rabbit?\nB: ______________",
+        options: [
+          "(1) Yes, I can.",
+          "(2) I am nine.",
+          "(3) It's sunny."
+        ],
+        answer: 1,
+        explanation: "A question starting with 'Can you...?' requires 'Yes, I can.' or 'No, I can't.' Option (1) is the grammatically correct answer."
+      },
+      {
+        id: "111-20",
+        year: "111",
+        num: 20,
+        part: "sentence",
+        category: "Sentences & Objects",
+        type: "Sentence Identification",
+        stem: "Look at the picture: [A student opening his backpack to take out an English textbook]. What should the teacher say?",
+        visualType: "svg-takeout",
+        options: [
+          "(1) Close your eyes.",
+          "(2) Take out your book.",
+          "(3) Stand up, please."
+        ],
+        answer: 2,
+        explanation: "'Take out your book.' means 把你的書拿出來. This matches the picture of taking out a textbook. Option (2)."
+      },
+      {
+        id: "111-21",
+        year: "111",
+        num: 21,
+        part: "sentence",
+        category: "Descriptions",
+        type: "Sentence Identification",
+        stem: "Which sentence matches the picture? [A tall giraffe standing beside a very short little tree]",
+        visualType: "svg-tall",
+        options: [
+          "(1) The giraffe is tall.",
+          "(2) The giraffe is short.",
+          "(3) The giraffe can swim."
+        ],
+        answer: 1,
+        explanation: "'tall' means 高的. A giraffe is prominently tall. 'The giraffe is tall.' matches option (1)."
+      },
+      {
+        id: "111-22",
+        year: "111",
+        num: 22,
+        part: "sentence",
+        category: "Food Preferences",
+        type: "Sentence Comprehension",
+        stem: "Read the dialogue:\nA: What do you want to drink?\nB: I want fresh milk, please.\nWhat does B want?",
+        dialogue: null,
+        options: [
+          "(1) A glass of water",
+          "(2) A carton of fresh milk",
+          "(3) A cup of hot coffee"
+        ],
+        answer: 2,
+        explanation: "B specifically said 'I want fresh milk, please.' (我想要新鮮牛奶). Matches option (2)."
+      },
+      {
+        id: "111-23",
+        year: "111",
+        num: 23,
+        part: "sentence",
+        category: "Time & Routine",
+        type: "Picture Reading",
+        stem: "Look at the clock showing 8:00 AM and a student eating toast for breakfast. What time is it?",
+        visualType: "svg-clock8",
+        options: [
+          "(1) It's eight o'clock.",
+          "(2) It's twelve o'clock.",
+          "(3) It's two o'clock."
+        ],
+        answer: 1,
+        explanation: "The clock face shows 8:00 ('eight o'clock'). 'It's eight o'clock.' matches option (1)."
+      },
+      {
+        id: "111-24",
+        year: "111",
+        num: 24,
+        part: "sentence",
+        category: "Weather & Outdoor",
+        type: "Picture Reading",
+        stem: "Look at the picture: [Children holding umbrellas with raindrops falling from grey clouds]. Choose the correct sentence:",
+        visualType: "svg-rainy",
+        options: [
+          "(1) It's rainy today.",
+          "(2) It's sunny and hot.",
+          "(3) It's windy and dry."
+        ],
+        answer: 1,
+        explanation: "Raindrops and umbrellas indicate rainy weather: 'It's rainy today.' (今天下雨了). Option (1)."
+      },
+      {
+        id: "111-25",
+        year: "111",
+        num: 25,
+        part: "sentence",
+        category: "Short Passage",
+        type: "Reading Comprehension",
+        stem: "Read the story:\n'Tom is a student. He has a blue schoolbag. Inside his bag, there are two pencils and one ruler. He likes English.'\nWhat does Tom have in his schoolbag?",
+        dialogue: null,
+        options: [
+          "(1) Three erasers and one book",
+          "(2) Two pencils and one ruler",
+          "(3) Four pens and a banana"
+        ],
+        answer: 2,
+        explanation: "The passage explicitly states: 'Inside his bag, there are two pencils and one ruler.' Option (2) is accurate."
+      },
+
+      // ----------------------------------------------------
+      // YEAR 112 (2023) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "112-11",
+        year: "112",
+        num: 11,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A glass of freshly squeezed orange juice with a straw]",
+        visualType: "svg-juice",
+        options: [
+          "(1) juice",
+          "(2) jump",
+          "(3) jam"
+        ],
+        answer: 1,
+        explanation: "'juice' means 果汁. Initial sound /dʒ/. 'jump' is 跳躍, 'jam' is 果醬. Correct answer is (1)."
+      },
+      {
+        id: "112-12",
+        year: "112",
+        num: 12,
+        part: "vocab",
+        category: "School Supplies",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A straight wooden 15cm measuring ruler]",
+        visualType: "svg-ruler",
+        options: [
+          "(1) red",
+          "(2) run",
+          "(3) ruler"
+        ],
+        answer: 3,
+        explanation: "'ruler' means 尺. 'red' is 紅色, 'run' is 跑步. Correct answer is (3)."
+      },
+      {
+        id: "112-13",
+        year: "112",
+        num: 13,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A little green frog sitting on a lily pad]",
+        visualType: "svg-frog",
+        options: [
+          "(1) fish",
+          "(2) frog",
+          "(3) fox"
+        ],
+        answer: 2,
+        explanation: "'frog' means 青蛙. Blend 'fr-'. 'fish' is 魚, 'fox' is 狐狸. Correct answer is (2)."
+      },
+      {
+        id: "112-14",
+        year: "112",
+        num: 14,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the picture: [A girl holding a microphone and singing happily on stage]",
+        visualType: "svg-sing",
+        options: [
+          "(1) sit",
+          "(2) sing",
+          "(3) see"
+        ],
+        answer: 2,
+        explanation: "'sing' means 唱歌. '-ing' phonics family. 'sit' is 坐下, 'see' is 看見. Correct answer is (2)."
+      },
+      {
+        id: "112-15",
+        year: "112",
+        num: 15,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the balloons: [🎈 🎈 🎈 🎈 🎈 🎈 🎈] (Seven balloons)",
+        visualType: "svg-seven",
+        options: [
+          "(1) seven",
+          "(2) six",
+          "(3) ten"
+        ],
+        answer: 1,
+        explanation: "There are 7 balloons. 'seven' means 七. 'six' is 6, 'ten' is 10. Correct answer is (1)."
+      },
+      {
+        id: "112-16",
+        year: "112",
+        num: 16,
+        part: "vocab",
+        category: "Family & People",
+        type: "Word Identification",
+        stem: "Look at the picture: [A boy wearing a baseball cap playing sports]",
+        visualType: "svg-boy",
+        options: [
+          "(1) boy",
+          "(2) bag",
+          "(3) bird"
+        ],
+        answer: 1,
+        explanation: "'boy' means 男孩. 'bag' is 書包/袋子, 'bird' is 鳥. Correct answer is (1)."
+      },
+      {
+        id: "112-17",
+        year: "112",
+        num: 17,
+        part: "vocab",
+        category: "Descriptions",
+        type: "Word Identification",
+        stem: "Look at the picture: [A very tall boy standing beside a short doorway]",
+        visualType: "svg-tallboy",
+        options: [
+          "(1) tall",
+          "(2) two",
+          "(3) tea"
+        ],
+        answer: 1,
+        explanation: "'tall' means 高的. 'two' is 數字二, 'tea' is 茶. Correct answer is (1)."
+      },
+      {
+        id: "112-18",
+        year: "112",
+        num: 18,
+        part: "sentence",
+        category: "Everyday Phrases",
+        type: "Dialogue Completion",
+        stem: "Read the conversation and select the best answer:",
+        dialogue: "A: What color is the apple?\nB: ______________",
+        options: [
+          "(1) It's red.",
+          "(2) It's four.",
+          "(3) I'm fine."
+        ],
+        answer: 1,
+        explanation: "Question asks 'What color...?' (什麼顏色？). Answer must state a color: 'It's red.' (它是紅色的). Option (1)."
+      },
+      {
+        id: "112-19",
+        year: "112",
+        num: 19,
+        part: "sentence",
+        category: "Sentences & Objects",
+        type: "Sentence Identification",
+        stem: "Look at the picture: [A teacher pointing to the door and gesturing for a student to come in]. What does the teacher say?",
+        visualType: "svg-comein",
+        options: [
+          "(1) Good night.",
+          "(2) Come in, please.",
+          "(3) Look at the cat."
+        ],
+        answer: 2,
+        explanation: "'Come in, please.' (請進來). Suitable classroom English instruction. Option (2)."
+      },
+      {
+        id: "112-20",
+        year: "112",
+        num: 20,
+        part: "sentence",
+        category: "Animals & Habits",
+        type: "Sentence Identification",
+        stem: "Which sentence matches the picture? [A playful monkey climbing high on a tree branch eating a banana]",
+        visualType: "svg-monkey",
+        options: [
+          "(1) The monkey can climb the tree.",
+          "(2) The monkey can fly.",
+          "(3) The monkey is in the water."
+        ],
+        answer: 1,
+        explanation: "'The monkey can climb the tree.' (猴子會爬樹). Monkeys climb trees, they do not fly or live in water. Option (1)."
+      },
+      {
+        id: "112-21",
+        year: "112",
+        num: 21,
+        part: "sentence",
+        category: "Time & Dialogue",
+        type: "Dialogue Completion",
+        stem: "Complete the dialogue about time:",
+        dialogue: "A: What time is it?\nB: ______________ (Clock shows 10:00)",
+        options: [
+          "(1) It is ten o'clock.",
+          "(2) I am ten.",
+          "(3) It is sunny."
+        ],
+        answer: 1,
+        explanation: "For time inquiries, use 'It is [hour] o'clock.' Here it is 10:00, so 'It is ten o'clock.' Option (1)."
+      },
+      {
+        id: "112-22",
+        year: "112",
+        num: 22,
+        part: "sentence",
+        category: "Feelings & States",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A student smiling brightly, jumping with joy after receiving a high score badge]. Choose the sentence:",
+        visualType: "svg-happy",
+        options: [
+          "(1) The boy is sad.",
+          "(2) The boy is happy.",
+          "(3) The boy is tired."
+        ],
+        answer: 2,
+        explanation: "'happy' means 開心/快樂的. The boy is joyful and smiling: 'The boy is happy.' Option (2)."
+      },
+      {
+        id: "112-23",
+        year: "112",
+        num: 23,
+        part: "sentence",
+        category: "Weather & Activities",
+        type: "Sentence Comprehension",
+        stem: "Read the dialogue:\nMom: Look outside! It is windy and cool.\nLeo: Let's go fly a kite in the park!\nHow is the weather?",
+        dialogue: null,
+        options: [
+          "(1) It's rainy and hot.",
+          "(2) It's windy and cool.",
+          "(3) It's snowy."
+        ],
+        answer: 2,
+        explanation: "Mom says: 'It is windy and cool.' (有風且涼爽). Perfect for flying a kite. Matches option (2)."
+      },
+      {
+        id: "112-24",
+        year: "112",
+        num: 24,
+        part: "sentence",
+        category: "Reading Signs & Menus",
+        type: "Short Reading",
+        stem: "Read the snack bar menu:\n[Juice: $10 | Milk: $15 | Cake: $20]\nAnna has $15. What can she buy?",
+        dialogue: null,
+        options: [
+          "(1) Cake",
+          "(2) Milk",
+          "(3) Cake and milk"
+        ],
+        answer: 2,
+        explanation: "Milk costs $15, which matches Anna's budget. Cake costs $20, which is too expensive. Correct answer is (2) Milk."
+      },
+      {
+        id: "112-25",
+        year: "112",
+        num: 25,
+        part: "sentence",
+        category: "Short Passage",
+        type: "Reading Comprehension",
+        stem: "Read the story:\n'This is Lily. She has two pets: a brown dog and a yellow bird. The dog likes to run in the grass. The bird can sing sweet songs.'\nWhat can the bird do?",
+        dialogue: null,
+        options: [
+          "(1) It can sing.",
+          "(2) It can swim.",
+          "(3) It can cook."
+        ],
+        answer: 1,
+        explanation: "The story states: 'The bird can sing sweet songs.' Therefore, the bird can sing. Option (1)."
+      },
+
+      // ----------------------------------------------------
+      // YEAR 113 (2024) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "113-11",
+        year: "113",
+        num: 11,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A carton of white milk with a straw]",
+        visualType: "svg-milk",
+        options: [
+          "(1) milk",
+          "(2) mom",
+          "(3) monkey"
+        ],
+        answer: 1,
+        explanation: "'milk' means 牛奶. Initial sound /m/. 'mom' is 媽媽, 'monkey' is 猴子. Correct answer is (1)."
+      },
+      {
+        id: "113-12",
+        year: "113",
+        num: 12,
+        part: "vocab",
+        category: "School & Objects",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A school backpack / bookbag]",
+        visualType: "svg-bag",
+        options: [
+          "(1) bag",
+          "(2) box",
+          "(3) bed"
+        ],
+        answer: 1,
+        explanation: "'bag' means 書包/袋子. Phonics short 'a' /æ/. 'box' is 盒子, 'bed' is 床. Correct answer is (1)."
+      },
+      {
+        id: "113-13",
+        year: "113",
+        num: 13,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the pencils: [✏️ ✏️ ✏️] (Three pencils)",
+        visualType: "svg-three",
+        options: [
+          "(1) one",
+          "(2) two",
+          "(3) three"
+        ],
+        answer: 3,
+        explanation: "There are 3 pencils. 'three' means 三. Unvoiced 'th' /θ/. Correct answer is (3)."
+      },
+      {
+        id: "113-14",
+        year: "113",
+        num: 14,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the picture: [A student holding a pencil writing words in a notebook]",
+        visualType: "svg-write",
+        options: [
+          "(1) write",
+          "(2) walk",
+          "(3) wash"
+        ],
+        answer: 1,
+        explanation: "'write' means 寫字. Silent 'w' digraph 'wr-'. 'walk' is 散步, 'wash' is 洗滌. Correct answer is (1)."
+      },
+      {
+        id: "113-15",
+        year: "113",
+        num: 15,
+        part: "vocab",
+        category: "Colors & Shapes",
+        type: "Word Identification",
+        stem: "Look at the color swatch: [Forest green leaf]",
+        visualType: "svg-green",
+        options: [
+          "(1) green",
+          "(2) grey",
+          "(3) gold"
+        ],
+        answer: 1,
+        explanation: "'green' means 綠色. 'gr-' blend with long 'ee' /i:/. Correct answer is (1)."
+      },
+      {
+        id: "113-16",
+        year: "113",
+        num: 16,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture: [A cute fluffy rabbit with long ears hopping]",
+        visualType: "svg-rabbit",
+        options: [
+          "(1) red",
+          "(2) rabbit",
+          "(3) ruler"
+        ],
+        answer: 2,
+        explanation: "'rabbit' means 兔子. Two-syllable word 'rab-bit'. Correct answer is (2)."
+      },
+      {
+        id: "113-17",
+        year: "113",
+        num: 17,
+        part: "vocab",
+        category: "Descriptions",
+        type: "Word Identification",
+        stem: "Look at the picture: [A thin, slender pencil beside a thick marker]",
+        visualType: "svg-thin",
+        options: [
+          "(1) thin",
+          "(2) ten",
+          "(3) tall"
+        ],
+        answer: 1,
+        explanation: "'thin' means 瘦的/細的. Opposite of fat/thick. 'th-' digraph. Correct answer is (1)."
+      },
+      {
+        id: "113-18",
+        year: "113",
+        num: 18,
+        part: "sentence",
+        category: "Family & Age",
+        type: "Sentence Identification",
+        stem: "Read the sentence and choose the matching picture:\n'My baby brother is one year old.'",
+        dialogue: null,
+        options: [
+          "(1) A cute baby with a birthday cake showing candle number 1",
+          "(2) An old grandfather sitting in an armchair",
+          "(3) A teenage boy playing basketball"
+        ],
+        answer: 1,
+        explanation: "'My baby brother is one year old.' (我的小弟弟一歲). Matches (1) baby with candle #1."
+      },
+      {
+        id: "113-19",
+        year: "113",
+        num: 19,
+        part: "sentence",
+        category: "Food & Requests",
+        type: "Sentence Identification",
+        stem: "Read the sentence:\n'I want five sweet yellow bananas.'\nWhich fruit plate does the person want?",
+        dialogue: null,
+        options: [
+          "(1) A plate with two red strawberries",
+          "(2) A bunch of five yellow bananas",
+          "(3) Three green watermelons"
+        ],
+        answer: 2,
+        explanation: "Matches (2): five bananas."
+      },
+      {
+        id: "113-20",
+        year: "113",
+        num: 20,
+        part: "sentence",
+        category: "Ability & Animals",
+        type: "Sentence Identification",
+        stem: "Read the description:\n'Look! The yellow duck can swim, but the little rabbit cannot swim.'\nWhich statement is correct?",
+        dialogue: null,
+        options: [
+          "(1) The duck can swim.",
+          "(2) The rabbit can swim.",
+          "(3) Neither can swim."
+        ],
+        answer: 1,
+        explanation: "The passage states: 'The yellow duck can swim.' So (1) is correct."
+      },
+      {
+        id: "113-21",
+        year: "113",
+        num: 21,
+        part: "sentence",
+        category: "Weather & Dialogue",
+        type: "Dialogue Comprehension",
+        stem: "Read the conversation:\nA: How's the weather today?\nB: It's warm. It's not hot.\nWhat is the weather like?",
+        dialogue: null,
+        options: [
+          "(1) Very cold and snowy",
+          "(2) Warm and pleasant",
+          "(3) Boiling hot"
+        ],
+        answer: 2,
+        explanation: "B says: 'It's warm. It's not hot.' (天氣溫暖，不熱). Matches (2)."
+      },
+      {
+        id: "113-22",
+        year: "113-22",
+        year: "113",
+        num: 22,
+        part: "sentence",
+        category: "Feelings & Animals",
+        type: "Sentence Identification",
+        stem: "Read the sentence:\n'I see a little black fish. It is very happy.'\nWhich drawing matches?",
+        dialogue: null,
+        options: [
+          "(1) A sad brown dog crying",
+          "(2) An angry green snake",
+          "(3) A cheerful little black fish smiling in water"
+        ],
+        answer: 3,
+        explanation: "Target features: 'black fish' (黑色的魚) and 'very happy' (非常開心). Matches (3)."
+      },
+      {
+        id: "113-23",
+        year: "113",
+        num: 23,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A girl standing on a sunny beach with the bright sun shining in the sky]. Which sentence best describes the picture?",
+        visualType: "svg-sunny",
+        options: [
+          "(1) It's cold and rainy.",
+          "(2) It's sunny.",
+          "(3) It's dark night."
+        ],
+        answer: 2,
+        explanation: "The sun is shining brightly: 'It's sunny.' (天氣晴朗). Option (2)."
+      },
+      {
+        id: "113-24",
+        year: "113",
+        num: 24,
+        part: "sentence",
+        category: "Time & Dialogue",
+        type: "Dialogue Completion",
+        stem: "Read the dialogue:\nFather: What time is it now, Sam?\nSam: Look at the wall clock, Dad. ______________ (Clock shows 9:00 PM).\nFather: Time for bed!",
+        dialogue: null,
+        options: [
+          "(1) It's nine o'clock.",
+          "(2) It's twelve o'clock.",
+          "(3) It's one o'clock."
+        ],
+        answer: 1,
+        explanation: "The clock shows 9:00, and bedtime fits 9:00. 'It's nine o'clock.' Option (1)."
+      },
+      {
+        id: "113-25",
+        year: "113",
+        num: 25,
+        part: "sentence",
+        category: "Short Passage",
+        type: "Reading Comprehension",
+        stem: "Read the classroom report:\n'My name is Eric. I am in Class 402. I have two best friends, Gary and Tina. Gary can play soccer. Tina can dance very well. I can draw.'\nWho can dance?",
+        dialogue: null,
+        options: [
+          "(1) Eric",
+          "(2) Gary",
+          "(3) Tina"
+        ],
+        answer: 3,
+        explanation: "The sentence states: 'Tina can dance very well.' Therefore, Tina can dance. Correct option is (3)."
+      },
+
+      // ----------------------------------------------------
+      // YEAR 114 (2025) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "114-11",
+        year: "114",
+        num: 11,
+        part: "vocab",
+        category: "Phonics & Words",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A slender stick figure / person looking very thin]",
+        visualType: "svg-thinperson",
+        options: [
+          "(1) three",
+          "(2) thin",
+          "(3) see"
+        ],
+        answer: 2,
+        explanation: "'thin' means 瘦的. Minimal pair distinction between 'three', 'thin', and 'see'. Correct answer is (2)."
+      },
+      {
+        id: "114-12",
+        year: "114",
+        num: 12,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the picture: [A student holding an open book, reading stories]",
+        visualType: "svg-readingchild",
+        options: [
+          "(1) write",
+          "(2) read",
+          "(3) sing"
+        ],
+        answer: 2,
+        explanation: "'read' means 看書/閱讀. 'write' is 寫字, 'sing' is 唱歌. Correct answer is (2)."
+      },
+      {
+        id: "114-13",
+        year: "114",
+        num: 13,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture: [A clear glass of pure water]",
+        visualType: "svg-water",
+        options: [
+          "(1) want",
+          "(2) water",
+          "(3) warm"
+        ],
+        answer: 2,
+        explanation: "'water' means 水. Phonics beginning 'w-'. 'want' is 想要, 'warm' is 溫暖的. Correct answer is (2)."
+      },
+      {
+        id: "114-14",
+        year: "114",
+        num: 14,
+        part: "vocab",
+        category: "Descriptions",
+        type: "Word Identification",
+        stem: "Look at the picture: [A snowman shivering in freezing winter temperatures]",
+        visualType: "svg-freezing",
+        options: [
+          "(1) tall",
+          "(2) cold",
+          "(3) short"
+        ],
+        answer: 2,
+        explanation: "'cold' means 寒冷的. 'tall' is 高的, 'short' is 矮的/短的. Correct answer is (2)."
+      },
+      {
+        id: "114-15",
+        year: "114",
+        num: 15,
+        part: "vocab",
+        category: "Family & People",
+        type: "Word Identification",
+        stem: "Look at the picture: [A cheerful young boy waving his hand hello]",
+        visualType: "svg-boywave",
+        options: [
+          "(1) boy",
+          "(2) girl",
+          "(3) blue"
+        ],
+        answer: 1,
+        explanation: "'boy' means 男孩. 'girl' is 女孩, 'blue' is 藍色. Correct answer is (1)."
+      },
+      {
+        id: "114-16",
+        year: "114",
+        num: 16,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the apples: [🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎] (Nine apples)",
+        visualType: "svg-nine",
+        options: [
+          "(1) eight",
+          "(2) nine",
+          "(3) ten"
+        ],
+        answer: 2,
+        explanation: "There are 9 apples. 'nine' means 九. Magic 'e' pattern 'n-i-n-e'. Correct answer is (2)."
+      },
+      {
+        id: "114-17",
+        year: "114",
+        num: 17,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture: [A big strong lion with a glorious mane]",
+        visualType: "svg-lion",
+        options: [
+          "(1) lion",
+          "(2) leg",
+          "(3) lamp"
+        ],
+        answer: 1,
+        explanation: "'lion' means 獅子. Initial sound /l/. Correct answer is (1)."
+      },
+      {
+        id: "114-18",
+        year: "114",
+        num: 18,
+        part: "sentence",
+        category: "Food Preferences",
+        type: "Dialogue Comprehension",
+        stem: "Read the conversation and choose the correct answer:",
+        dialogue: "A: What do you like to eat?\nB: Apple pie.",
+        options: [
+          "(1) A warm, baked apple pie on a plate",
+          "(2) A bowl of hot rice",
+          "(3) A bottle of green juice"
+        ],
+        answer: 1,
+        explanation: "B likes 'Apple pie' (蘋果派). Option (1) shows an apple pie."
+      },
+      {
+        id: "114-19",
+        year: "114",
+        num: 19,
+        part: "sentence",
+        category: "Ability & Dialogue",
+        type: "Dialogue Comprehension",
+        stem: "Read the question and answer:",
+        dialogue: "A: Can your sister read?\nB: No, she can't. She is only two years old.",
+        options: [
+          "(1) The sister is a fast reader.",
+          "(2) The sister cannot read.",
+          "(3) The sister is ten years old."
+        ],
+        answer: 2,
+        explanation: "B answers 'No, she can't.' meaning the sister cannot read. Correct option is (2)."
+      },
+      {
+        id: "114-20",
+        year: "114",
+        num: 20,
+        part: "sentence",
+        category: "Family & Ability",
+        type: "Sentence Identification",
+        stem: "Read the sentence:\n'My brother is five years old. He can write his English name.'\nWhich picture matches?",
+        dialogue: null,
+        options: [
+          "(1) A five-year-old boy writing letters with a pencil",
+          "(2) An old man sleeping in bed",
+          "(3) A girl cooking soup in the kitchen"
+        ],
+        answer: 1,
+        explanation: "Option (1) shows a 5-year-old boy writing letters, which directly illustrates 'He can write his English name.'"
+      },
+      {
+        id: "114-21",
+        year: "114",
+        num: 21,
+        part: "sentence",
+        category: "Food & Weather",
+        type: "Sentence Identification",
+        stem: "Read the sentence:\n'It is cold today. I want a bowl of hot rice.'\nWhat does the person want?",
+        dialogue: null,
+        options: [
+          "(1) Cold ice cream",
+          "(2) Hot rice",
+          "(3) Iced tea"
+        ],
+        answer: 2,
+        explanation: "'I want hot rice.' (我想要熱騰騰的飯). Option (2)."
+      },
+      {
+        id: "114-22",
+        year: "114",
+        num: 22,
+        part: "sentence",
+        category: "Descriptions",
+        type: "Sentence Comprehension",
+        stem: "Read the description:\n'My father is tall. My mother is thin.'\nWhich statement is TRUE?",
+        dialogue: null,
+        options: [
+          "(1) The father is short.",
+          "(2) The mother is thin.",
+          "(3) The mother is very tall."
+        ],
+        answer: 2,
+        explanation: "The sentence explicitly says 'My mother is thin.' (我媽媽很瘦). Option (2) matches directly."
+      },
+      {
+        id: "114-23",
+        year: "114",
+        num: 23,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the dining table picture: [A young boy pointing at a glass bottle of milk]. Choose the sentence that fits:",
+        visualType: "svg-boymilk",
+        options: [
+          "(1) Boy: I want milk.",
+          "(2) Father: I want juice.",
+          "(3) Mother: I want water."
+        ],
+        answer: 1,
+        explanation: "The young boy is clearly pointing to the milk and speaking: 'Boy: I want milk.' Option (1)."
+      },
+      {
+        id: "114-24",
+        year: "114",
+        num: 24,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A massive friendly lion lying peacefully in the grassland with a big smile]. Choose the best sentence:",
+        visualType: "svg-biglion",
+        options: [
+          "(1) I see a lion. It is not big.",
+          "(2) The lion is big. It is happy.",
+          "(3) The rabbit is big. It can't dance."
+        ],
+        answer: 2,
+        explanation: "The lion is large and has a happy, joyful expression: 'The lion is big. It is happy.' Option (2)."
+      },
+      {
+        id: "114-25",
+        year: "114",
+        num: 25,
+        part: "sentence",
+        category: "Time & Weather",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A clock showing 8:00 and raindrops falling heavily outside the window]. Choose the matching sentence:",
+        visualType: "svg-clock8rain",
+        options: [
+          "(1) It's sunny. The girl is sad.",
+          "(2) It's eight o'clock. It's rainy.",
+          "(3) It's not rainy. The girl is happy."
+        ],
+        answer: 2,
+        explanation: "The clock shows 8:00 ('eight o'clock') and rain is falling outside ('rainy'): 'It's eight o'clock. It's rainy.' Option (2)."
+      },
+
+      // ----------------------------------------------------
+      // YEAR 115 (2026) - Questions 11 to 25
+      // ----------------------------------------------------
+      {
+        id: "115-11",
+        year: "115",
+        num: 11,
+        part: "vocab",
+        category: "Animals & Nature",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A golden fish swimming in water]",
+        visualType: "svg-goldfish",
+        options: [
+          "(1) fish",
+          "(2) four",
+          "(3) farm"
+        ],
+        answer: 1,
+        explanation: "'fish' means 魚. Digraph 'sh' /ʃ/. 'four' is 四, 'farm' is 農場. Correct answer is (1)."
+      },
+      {
+        id: "115-12",
+        year: "115",
+        num: 12,
+        part: "vocab",
+        category: "School & Objects",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A wooden desk in a classroom]",
+        visualType: "svg-desk",
+        options: [
+          "(1) dog",
+          "(2) desk",
+          "(3) duck"
+        ],
+        answer: 2,
+        explanation: "'desk' means 書桌. Ending blend '-sk'. 'dog' is 狗, 'duck' is 鴨子. Correct answer is (2)."
+      },
+      {
+        id: "115-13",
+        year: "115",
+        num: 13,
+        part: "vocab",
+        category: "Food & Drinks",
+        type: "Word Identification",
+        stem: "Look at the picture and choose the correct word: [A crunchy, juicy red apple]",
+        visualType: "svg-apple",
+        options: [
+          "(1) apple",
+          "(2) ant",
+          "(3) arm"
+        ],
+        answer: 1,
+        explanation: "'apple' means 蘋果. Short 'a' /æ/. 'ant' is 螞蟻, 'arm' is 手臂. Correct answer is (1)."
+      },
+      {
+        id: "115-14",
+        year: "115",
+        num: 14,
+        part: "vocab",
+        category: "Feelings & States",
+        type: "Word Identification",
+        stem: "Look at the picture: [A student yawning with sleepy eyes, feeling very tired after studying]",
+        visualType: "svg-tired",
+        options: [
+          "(1) tired",
+          "(2) tall",
+          "(3) two"
+        ],
+        answer: 1,
+        explanation: "'tired' means 疲倦的/累的. 'tall' is 高的, 'two' is 數字二. Correct answer is (1)."
+      },
+      {
+        id: "115-15",
+        year: "115",
+        num: 15,
+        part: "vocab",
+        category: "Numbers",
+        type: "Word Identification",
+        stem: "Count the books on the desk: [📚 📚 📚 📚 📚 📚 📚 📚 📚 📚] (Ten books)",
+        visualType: "svg-ten",
+        options: [
+          "(1) six",
+          "(2) nine",
+          "(3) ten"
+        ],
+        answer: 3,
+        explanation: "There are 10 books. 'ten' means 十. Correct answer is (3)."
+      },
+      {
+        id: "115-16",
+        year: "115",
+        num: 16,
+        part: "vocab",
+        category: "Colors & Shapes",
+        type: "Word Identification",
+        stem: "Look at the color patch: [Deep rich purple paint]",
+        visualType: "svg-purple",
+        options: [
+          "(1) purple",
+          "(2) pink",
+          "(3) pen"
+        ],
+        answer: 1,
+        explanation: "'purple' means 紫色. R-controlled vowel 'ur' /ɜ:/. 'pink' is 粉紅色, 'pen' is 原子筆. Correct answer is (1)."
+      },
+      {
+        id: "115-17",
+        year: "115",
+        num: 17,
+        part: "vocab",
+        category: "Actions & Verbs",
+        type: "Word Identification",
+        stem: "Look at the picture: [A child joyfully jumping rope high off the ground]",
+        visualType: "svg-jump",
+        options: [
+          "(1) jump",
+          "(2) juice",
+          "(3) jar"
+        ],
+        answer: 1,
+        explanation: "'jump' means 跳躍. Ending blend '-mp'. 'juice' is 果汁, 'jar' is 玻璃罐. Correct answer is (1)."
+      },
+      {
+        id: "115-18",
+        year: "115",
+        num: 18,
+        part: "sentence",
+        category: "Everyday Phrases",
+        type: "Dialogue Completion",
+        stem: "Read the conversation:\nTeacher: Don't give up on the puzzle, Leo! ______________\nLeo: Okay, I will do my best!",
+        dialogue: null,
+        options: [
+          "(1) Try again.",
+          "(2) Close your book.",
+          "(3) It's six o'clock."
+        ],
+        answer: 1,
+        explanation: "'Try again.' means 再試一次. Encouraging tone fits the context. Correct answer is (1)."
+      },
+      {
+        id: "115-19",
+        year: "115",
+        num: 19,
+        part: "sentence",
+        category: "Descriptions & Ability",
+        type: "Sentence Identification",
+        stem: "Read the sentence and choose the matching picture:\n'The girl is tall. She can dance gracefully.'",
+        dialogue: null,
+        options: [
+          "(1) A tall girl dancing on a stage",
+          "(2) A short boy swimming in a river",
+          "(3) A cat sleeping on a sofa"
+        ],
+        answer: 1,
+        explanation: "'The girl is tall. She can dance.' (這個女孩很高，她會跳舞). Option (1) directly illustrates both attributes."
+      },
+      {
+        id: "115-20",
+        year: "115",
+        num: 20,
+        part: "sentence",
+        category: "Animals & Descriptions",
+        type: "Sentence Identification",
+        stem: "Read the sentence:\n'I see a puppy dog in the garden. It is not big.'\nWhat does the speaker see?",
+        dialogue: null,
+        options: [
+          "(1) A huge big dog",
+          "(2) A small little dog",
+          "(3) A tall elephant"
+        ],
+        answer: 2,
+        explanation: "'It is not big' equals small (不大的小狗). Option (2) matches."
+      },
+      {
+        id: "115-21",
+        year: "115",
+        num: 21,
+        part: "sentence",
+        category: "Time & Dialogue",
+        type: "Dialogue Completion",
+        stem: "Read the conversation:\nA: What time is it now?\nB: It is three o'clock.\nWhat does B's watch show?",
+        dialogue: null,
+        options: [
+          "(1) 3:00",
+          "(2) 6:00",
+          "(3) 9:00"
+        ],
+        answer: 1,
+        explanation: "'three o'clock' is 3:00. Option (1)."
+      },
+      {
+        id: "115-22",
+        year: "115",
+        num: 22,
+        part: "sentence",
+        category: "Food Preferences",
+        type: "Dialogue Completion",
+        stem: "Read the dialogue:\nWaiter: What do you want to have for lunch?\nCustomer: ______________",
+        dialogue: null,
+        options: [
+          "(1) I want rice and chicken, please.",
+          "(2) I am nine years old.",
+          "(3) It's sunny outside."
+        ],
+        answer: 1,
+        explanation: "Responding to a food order requires ordering items: 'I want rice and chicken, please.' Option (1)."
+      },
+      {
+        id: "115-23",
+        year: "115",
+        num: 23,
+        part: "sentence",
+        category: "Picture Reading",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A student shivering and wearing a thick scarf, gloves, and coat in snow]. Choose the matching sentence:",
+        visualType: "svg-snowycoat",
+        options: [
+          "(1) It is hot. I want cold water.",
+          "(2) It is cold. Put on your coat.",
+          "(3) It is rainy. Take an umbrella."
+        ],
+        answer: 2,
+        explanation: "The picture represents freezing cold: 'It is cold. Put on your coat.' (天氣很冷，穿上你的外套). Option (2)."
+      },
+      {
+        id: "115-24",
+        year: "115",
+        num: 24,
+        part: "sentence",
+        category: "Feelings & States",
+        type: "Picture Reading",
+        stem: "Look at the picture: [A child resting her head on a school desk, closing her eyes and yawning]. What is the best description?",
+        visualType: "svg-sleepydesk",
+        options: [
+          "(1) She is happy and energetic.",
+          "(2) She is tired and sleepy.",
+          "(3) She is thirsty."
+        ],
+        answer: 2,
+        explanation: "Yawning and resting head shows fatigue: 'She is tired and sleepy.' (她很累而且想睡覺). Option (2)."
+      },
+      {
+        id: "115-25",
+        year: "115",
+        num: 25,
+        part: "sentence",
+        category: "Short Passage",
+        type: "Reading Comprehension",
+        stem: "Read the club sign:\n'Join our English Club!\nWe meet at 4:00 on Wednesday.\nWe read funny stories and sing songs together.\nTeacher Wendy is our club teacher.'\nWhat do they do in the English Club?",
+        dialogue: null,
+        options: [
+          "(1) They play basketball and swim.",
+          "(2) They read stories and sing songs.",
+          "(3) They cook soup and eat cake."
+        ],
+        answer: 2,
+        explanation: "The poster says: 'We read funny stories and sing songs together.' Option (2) accurately states this activity."
+      }
+    ];
+
+    /* ========================================================================
+       STATE MANAGEMENT & PERSISTENCE
+       ======================================================================== */
+    const APP_STATE = {
+      selectedYear: "110",
+      filterMode: "all",
+      instantFeedback: true,
+      answers: {},        // { [qid]: selectedOptionNumber (1, 2, or 3) }
+      bookmarks: {},      // { [qid]: boolean }
+      revealedExp: {}     // { [qid]: boolean }
+    };
+
+    // Load initial state via notebookAppApi if available
+    async function initPersistence() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+          const saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === 'object') {
+            if (saved.selectedYear) APP_STATE.selectedYear = saved.selectedYear;
+            if (saved.filterMode) APP_STATE.filterMode = saved.filterMode;
+            if (typeof saved.instantFeedback === 'boolean') APP_STATE.instantFeedback = saved.instantFeedback;
+            if (saved.answers) APP_STATE.answers = saved.answers;
+            if (saved.bookmarks) APP_STATE.bookmarks = saved.bookmarks;
+            if (saved.revealedExp) APP_STATE.revealedExp = saved.revealedExp;
+          }
+        }
+      } catch (err) {
+        console.warn("State restore note:", err);
+      }
+
+      // Synchronize UI
+      updateYearPillsUI();
+      const filterEl = document.getElementById('filter-status');
+      if (filterEl) filterEl.value = APP_STATE.filterMode;
+      updateInstantFeedbackBtnUI();
+
+      renderNavigator();
+      renderQuestions();
+      updateStatistics();
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === 'function') {
+        window.notebookAppApi.notifyAppReady();
+      }
+    }
+
+    async function persistState() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === 'function') {
+          await window.notebookAppApi.setAppState({
+            selectedYear: APP_STATE.selectedYear,
+            filterMode: APP_STATE.filterMode,
+            instantFeedback: APP_STATE.instantFeedback,
+            answers: APP_STATE.answers,
+            bookmarks: APP_STATE.bookmarks,
+            revealedExp: APP_STATE.revealedExp
+          });
+        }
+      } catch (err) {
+        console.warn("State persist note:", err);
+      }
+    }
+
+    /* ========================================================================
+       QUESTION FILTERING & QUERY
+       ======================================================================== */
+    function getFilteredQuestions() {
+      return QUESTION_BANK.filter(q => {
+        // Year filter
+        if (APP_STATE.selectedYear !== 'all' && q.year !== APP_STATE.selectedYear) {
+          return false;
+        }
+
+        // Sub-filter
+        const userAnswer = APP_STATE.answers[q.id];
+        const isAnswered = userAnswer !== undefined;
+        const isCorrect = isAnswered && (userAnswer === q.answer);
+        const isStarred = !!APP_STATE.bookmarks[q.id];
+
+        if (APP_STATE.filterMode === 'incorrect') {
+          return isAnswered && !isCorrect;
+        } else if (APP_STATE.filterMode === 'unanswered') {
+          return !isAnswered;
+        } else if (APP_STATE.filterMode === 'bookmarked') {
+          return isStarred;
+        } else if (APP_STATE.filterMode === 'vocab') {
+          return q.num >= 11 && q.num <= 17;
+        } else if (APP_STATE.filterMode === 'sentence') {
+          return q.num >= 18 && q.num <= 25;
+        }
+        return true;
+      });
+    }
+
+    function getYearQuestions(year) {
+      if (year === 'all') return QUESTION_BANK;
+      return QUESTION_BANK.filter(q => q.year === year);
+    }
+
+    /* ========================================================================
+       UI RENDERING FUNCTIONS
+       ======================================================================== */
+    function switchYear(year) {
+      APP_STATE.selectedYear = year;
+      updateYearPillsUI();
+      renderNavigator();
+      renderQuestions();
+      updateStatistics();
+      persistState();
+    }
+
+    function updateYearPillsUI() {
+      const yearBtns = document.querySelectorAll('.year-btn');
+      yearBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      const activeBtn = document.getElementById(`year-btn-${APP_STATE.selectedYear}`);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    function applyFilters() {
+      const filterSelect = document.getElementById('filter-status');
+      if (filterSelect) {
+        APP_STATE.filterMode = filterSelect.value;
+      }
+      renderNavigator();
+      renderQuestions();
+      updateStatistics();
+      persistState();
+    }
+
+    function toggleInstantFeedback() {
+      APP_STATE.instantFeedback = !APP_STATE.instantFeedback;
+      updateInstantFeedbackBtnUI();
+      renderQuestions();
+      persistState();
+    }
+
+    function updateInstantFeedbackBtnUI() {
+      const btn = document.getElementById('btn-feedback-mode');
+      if (!btn) return;
+      if (APP_STATE.instantFeedback) {
+        btn.innerHTML = `<i data-lucide="zap" style="width: 14px; height: 14px;"></i><span>Instant: ON</span>`;
+        btn.classList.remove('btn-secondary');
+        btn.classList.add('btn-primary-pop');
+      } else {
+        btn.innerHTML = `<i data-lucide="eye-off" style="width: 14px; height: 14px;"></i><span>Instant: OFF</span>`;
+        btn.classList.remove('btn-primary-pop');
+        btn.classList.add('btn-secondary');
+      }
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    function resetCurrentYearProgress() {
+      const targetQuestions = getYearQuestions(APP_STATE.selectedYear);
+      if (confirm(`Reset all answers for Year ${APP_STATE.selectedYear === 'all' ? 'All (90 questions)' : APP_STATE.selectedYear}?`)) {
+        targetQuestions.forEach(q => {
+          delete APP_STATE.answers[q.id];
+          delete APP_STATE.revealedExp[q.id];
+        });
+        renderNavigator();
+        renderQuestions();
+        updateStatistics();
+        persistState();
+      }
+    }
+
+    function toggleBookmark(qid, event) {
+      if (event) event.stopPropagation();
+      APP_STATE.bookmarks[qid] = !APP_STATE.bookmarks[qid];
+      const starBtn = document.getElementById(`star-btn-${qid}`);
+      if (starBtn) {
+        if (APP_STATE.bookmarks[qid]) {
+          starBtn.classList.add('active-star');
+        } else {
+          starBtn.classList.remove('active-star');
+        }
+      }
+      renderNavigator();
+      updateStatistics();
+      persistState();
+    }
+
+    function selectOption(qid, chosenOptionIndex) {
+      APP_STATE.answers[qid] = chosenOptionIndex;
+      if (APP_STATE.instantFeedback) {
+        APP_STATE.revealedExp[qid] = true;
+      }
+      renderSingleQuestionUI(qid);
+      renderNavigator();
+      updateStatistics();
+      persistState();
+    }
+
+    function toggleExplanation(qid) {
+      APP_STATE.revealedExp[qid] = !APP_STATE.revealedExp[qid];
+      const panel = document.getElementById(`exp-${qid}`);
+      if (panel) {
+        if (APP_STATE.revealedExp[qid]) {
+          panel.classList.add('visible');
+        } else {
+          panel.classList.remove('visible');
+        }
+      }
+      persistState();
+    }
+
+    function revealAllExplanations() {
+      const currentList = getFilteredQuestions();
+      const anyHidden = currentList.some(q => !APP_STATE.revealedExp[q.id]);
+      currentList.forEach(q => {
+        APP_STATE.revealedExp[q.id] = anyHidden;
+      });
+      renderQuestions();
+      persistState();
+    }
+
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) {
+        alert("Text-to-speech is not supported in this browser.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.9; // Slightly slower for primary elementary learners
+      window.speechSynthesis.speak(utterance);
+    }
+
+    /* Helper SVG Generator for crisp visual representations */
+    function getVisualGraphic(type) {
+      const svgs = {
+        'svg-tea': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><path d="M20 35h50v30c0 10-8 18-18 18H38c-10 0-18-8-18-18V35z" fill="#f8eef8"/><path d="M70 45h10a8 8 0 0 1 8 8v4a8 8 0 0 1-8 8H70"/><path d="M35 15c2 5-2 10 0 15"/><path d="M50 12c2 6-2 12 0 18"/><path d="M10 85h75" stroke-width="4"/></svg>`,
+        'svg-bird': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><path d="M20 50c15-20 40-15 50 0-10 15-30 20-50 0z" fill="#e0f4fc"/><circle cx="60" cy="45" r="3" fill="currentColor"/><path d="M70 45l15-3-12 10"/><path d="M30 40C20 20 45 25 45 42"/></svg>`,
+        'svg-eraser': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><polygon points="30,20 70,20 85,60 45,60" fill="#f2e8f2"/><polygon points="45,60 85,60 70,85 30,85" fill="#f080c0"/><line x1="30" y1="20" x2="15" y2="45"/><line x1="45" y1="60" x2="30" y2="85"/></svg>`,
+        'svg-cake': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><rect x="20" y="45" width="60" height="40" rx="6" fill="#f8eef8"/><path d="M20 45q15 10 30 0t30 0"/><line x1="50" y1="25" x2="50" y2="45" stroke-width="4" stroke="var(--warning)"/><circle cx="50" cy="18" r="4" fill="#c2207f"/></svg>`,
+        'svg-eight': `<div style="font-size: 1.8rem; letter-spacing: 4px;">🍎 🍎 🍎 🍎<br>🍎 🍎 🍎 🍎</div>`,
+        'svg-swim': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><circle cx="70" cy="35" r="10" fill="#e0f4fc"/><path d="M25 50l30-10 15 15"/><path d="M10 75q20-10 40 0t40 0" stroke-width="4"/><path d="M10 85q20-10 40 0t40 0" stroke-width="4"/></svg>`,
+        'svg-yellow': `<div style="width: 60px; height: 60px; border-radius: 50%; background: #ffd600; border: 3px solid #e0b800; box-shadow: var(--shadow-pink);"></div>`,
+        'svg-pencil': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--warning);"><polygon points="20,80 30,50 70,15 85,30 45,65" fill="#fef3c7"/><polygon points="20,80 25,68 32,75" fill="#2e1a28"/><line x1="60" y1="25" x2="75" y2="40"/></svg>`,
+        'svg-dog': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><circle cx="45" cy="40" r="22" fill="#f8eef8"/><ellipse cx="25" cy="35" rx="8" ry="16" fill="var(--outline)"/><circle cx="40" cy="35" r="3" fill="#2e1a28"/><ellipse cx="50" cy="45" rx="6" ry="4" fill="#2e1a28"/><path d="M45 62v20M60 62v20"/></svg>`,
+        'svg-rice': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><path d="M20 50h60a30 30 0 0 1-60 0z" fill="#ffffff" stroke="var(--primary)"/><path d="M25 50a25 25 0 0 1 50 0z" fill="#ffffff"/><path d="M40 25c1 5-2 10 0 15M50 20c1 6-2 12 0 18M60 25c1 5-2 10 0 15"/></svg>`,
+        'svg-five': `<div style="font-size: 1.8rem; letter-spacing: 6px; color: #ffd600; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">★ ★ ★ ★ ★</div>`,
+        'svg-read': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><path d="M50 30v45M50 30c-15-10-35-5-40 0v45c5-5 25-10 40 0M50 30c15-10 35-5 40 0v45c-5-5-25-10-40 0" fill="#ffffff"/></svg>`,
+        'svg-girl': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><circle cx="50" cy="45" r="20" fill="#fef7ff"/><path d="M30 45q-15 15-5 25M70 45q15 15 5 25"/><circle cx="43" cy="42" r="3" fill="#2e1a28"/><circle cx="57" cy="42" r="3" fill="#2e1a28"/><path d="M45 53q5 4 10 0"/></svg>`,
+        'svg-blue': `<div style="width: 60px; height: 60px; border-radius: 50%; background: #0096cc; border: 3px solid #0077a3; box-shadow: var(--shadow-sky);"></div>`,
+        'svg-takeout': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><rect x="30" y="35" width="40" height="45" rx="8" fill="#f2e8f2"/><path d="M40 35v-10a10 10 0 0 1 20 0v10"/><path d="M42 20h25v30H42z" fill="#ffffff" stroke="var(--primary)"/></svg>`,
+        'svg-tall': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--warning);"><circle cx="65" cy="20" r="10" fill="#fef3c7"/><line x1="65" y1="30" x2="60" y2="65" stroke-width="5"/><rect x="40" y="65" width="30" height="20" rx="5" fill="#fef3c7"/><line x1="45" y1="85" x2="45" y2="95" stroke-width="4"/><line x1="65" y1="85" x2="65" y2="95" stroke-width="4"/></svg>`,
+        'svg-clock8': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><circle cx="50" cy="50" r="38" fill="#ffffff"/><circle cx="50" cy="50" r="3" fill="#2e1a28"/><line x1="50" y1="50" x2="50" y2="20" stroke-width="4"/><line x1="50" y1="50" x2="30" y2="62" stroke-width="5" stroke="var(--primary)"/></svg>`,
+        'svg-clock3': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><circle cx="50" cy="50" r="38" fill="#ffffff"/><circle cx="50" cy="50" r="3" fill="#2e1a28"/><line x1="50" y1="50" x2="50" y2="20" stroke-width="4"/><line x1="50" y1="50" x2="75" y2="50" stroke-width="5" stroke="var(--primary)"/></svg>`,
+        'svg-rainy': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><path d="M25 45a15 15 0 0 1 30-5 12 12 0 0 1 20 5 10 10 0 0 1 0 20H25a12 12 0 0 1 0-20z" fill="#e0f4fc"/><line x1="30" y1="70" x2="25" y2="85" stroke-width="3"/><line x1="50" y1="70" x2="45" y2="85" stroke-width="3"/><line x1="70" y1="70" x2="65" y2="85" stroke-width="3"/></svg>`,
+        'svg-cold': `<div style="font-size: 2.5rem;">❄️ 🧥 🥶</div>`,
+        'svg-juice': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--warning);"><polygon points="30,30 70,30 62,85 38,85" fill="#fef3c7"/><line x1="50" y1="15" x2="45" y2="70" stroke-width="4" stroke="var(--primary)"/><line x1="30" y1="30" x2="70" y2="30" stroke-width="4"/></svg>`,
+        'svg-ruler': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><rect x="15" y="38" width="70" height="24" rx="4" fill="#f2e8f2"/><line x1="25" y1="38" x2="25" y2="50"/><line x1="35" y1="38" x2="35" y2="45"/><line x1="45" y1="38" x2="45" y2="50"/><line x1="55" y1="38" x2="55" y2="45"/><line x1="65" y1="38" x2="65" y2="50"/><line x1="75" y1="38" x2="75" y2="45"/></svg>`,
+        'svg-frog': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--positive);"><circle cx="50" cy="55" r="25" fill="#e6f6ee"/><circle cx="35" cy="35" r="10" fill="#e6f6ee"/><circle cx="65" cy="35" r="10" fill="#e6f6ee"/><circle cx="35" cy="35" r="4" fill="#2e1a28"/><circle cx="65" cy="35" r="4" fill="#2e1a28"/><path d="M38 60q12 8 24 0"/></svg>`,
+        'svg-sing': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><circle cx="45" cy="40" r="16" fill="#f8eef8"/><path d="M60 45l15 15"/><circle cx="78" cy="63" r="6" fill="var(--primary)"/><path d="M45 42q6 4 0 8"/></svg>`,
+        'svg-seven': `<div style="font-size: 1.8rem; letter-spacing: 5px;">🎈 🎈 🎈 🎈<br>🎈 🎈 🎈</div>`,
+        'svg-boy': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><circle cx="50" cy="45" r="22" fill="#e0f4fc"/><path d="M30 35q20-15 40 0" stroke-width="5" stroke="var(--tertiary)"/><circle cx="43" cy="45" r="3" fill="#2e1a28"/><circle cx="57" cy="45" r="3" fill="#2e1a28"/><path d="M45 55q5 5 10 0"/></svg>`,
+        'svg-tallboy': `<div style="font-size: 2.2rem;">🧍‍♂️ 🚪</div>`,
+        'svg-comein': `<div style="font-size: 2.4rem;">🚪 👋 🚶‍♂️</div>`,
+        'svg-monkey': `<div style="font-size: 2.4rem;">🐒 🌴 🍌</div>`,
+        'svg-happy': `<div style="font-size: 2.5rem;">😄 🎉 💯</div>`,
+        'svg-milk': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><polygon points="35,25 65,25 60,85 40,85" fill="#ffffff" stroke="var(--tertiary)"/><path d="M35 25l15-12 15 12"/><text x="42" y="60" font-size="12" font-weight="bold" fill="var(--tertiary)" stroke="none">MILK</text></svg>`,
+        'svg-bag': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><rect x="25" y="35" width="50" height="50" rx="10" fill="#f8eef8"/><path d="M38 35v-12a12 12 0 0 1 24 0v12"/><line x1="25" y1="55" x2="75" y2="55"/></svg>`,
+        'svg-three': `<div style="font-size: 2rem; letter-spacing: 8px;">✏️ ✏️ ✏️</div>`,
+        'svg-write': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><rect x="25" y="20" width="50" height="65" rx="4" fill="#ffffff"/><line x1="35" y1="35" x2="65" y2="35"/><line x1="35" y1="50" x2="65" y2="50"/><line x1="35" y1="65" x2="55" y2="65"/><polygon points="70,10 85,25 60,50 45,50 45,35" fill="var(--primary)"/></svg>`,
+        'svg-green': `<div style="width: 60px; height: 60px; border-radius: 50%; background: #138856; border: 3px solid #0d633e; box-shadow: 0 4px 16px rgba(19, 136, 86, 0.2);"></div>`,
+        'svg-rabbit': `<div style="font-size: 2.5rem;">🐇 🥕</div>`,
+        'svg-thin': `<div style="font-size: 2.2rem;">✏️ 🥢</div>`,
+        'svg-sunny': `<div style="font-size: 2.5rem;">☀️ 🏖️ 🌊</div>`,
+        'svg-thinperson': `<div style="font-size: 2.4rem;">🚶‍♂️ 🪡</div>`,
+        'svg-readingchild': `<div style="font-size: 2.4rem;">📖 👧 👓</div>`,
+        'svg-water': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--tertiary);"><polygon points="30,25 70,25 62,85 38,85" fill="#e0f4fc"/><path d="M38 50q12-6 24 0"/></svg>`,
+        'svg-freezing': `<div style="font-size: 2.5rem;">☃️ ❄️ 🥶</div>`,
+        'svg-boywave': `<div style="font-size: 2.4rem;">🙋‍♂️ 🧢 ⭐</div>`,
+        'svg-nine': `<div style="font-size: 1.8rem; letter-spacing: 4px;">🍎 🍎 🍎<br>🍎 🍎 🍎<br>🍎 🍎 🍎</div>`,
+        'svg-lion': `<div style="font-size: 2.5rem;">🦁 👑 🐾</div>`,
+        'svg-boymilk': `<div style="font-size: 2.4rem;">👦 🥛 🍽️</div>`,
+        'svg-biglion': `<div style="font-size: 2.5rem;">🦁 😊 🌿</div>`,
+        'svg-clock8rain': `<div style="font-size: 2.4rem;">🕗 🌧️ ☔</div>`,
+        'svg-goldfish': `<div style="font-size: 2.5rem;">🐠 🌊 🫧</div>`,
+        'svg-desk': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);"><polygon points="20,40 80,40 85,55 15,55" fill="#f2e8f2"/><line x1="22" y1="55" x2="20" y2="85" stroke-width="4"/><line x1="78" y1="55" x2="80" y2="85" stroke-width="4"/></svg>`,
+        'svg-apple': `<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--error);"><circle cx="43" cy="55" r="22" fill="#fee2e2"/><circle cx="57" cy="55" r="22" fill="#fee2e2"/><path d="M50 35c2-12 10-15 15-15"/><ellipse cx="58" cy="22" rx="6" ry="3" fill="#138856"/></svg>`,
+        'svg-tired': `<div style="font-size: 2.5rem;">🥱 😴 💤</div>`,
+        'svg-ten': `<div style="font-size: 1.8rem; letter-spacing: 4px;">📚 📚 📚 📚 📚<br>📚 📚 📚 📚 📚</div>`,
+        'svg-purple': `<div style="width: 60px; height: 60px; border-radius: 50%; background: #7c52aa; border: 3px solid #5d368b; box-shadow: var(--shadow-grape);"></div>`,
+        'svg-jump': `<div style="font-size: 2.5rem;">🦘 🤸‍♂️ ⚡</div>`,
+        'svg-snowycoat': `<div style="font-size: 2.5rem;">🧤 🧣 🧥 ❄️</div>`,
+        'svg-sleepydesk': `<div style="font-size: 2.5rem;">👧 💤 📚</div>`
+      };
+      return svgs[type] || `<div style="font-size: 2rem;">📝</div>`;
+    }
+
+    /* Render sidebar navigator */
+    function renderNavigator() {
+      const container = document.getElementById('nav-pills-container');
+      const counterEl = document.getElementById('sidebar-counter');
+      if (!container) return;
+
+      const list = getFilteredQuestions();
+      if (counterEl) {
+        counterEl.textContent = `${list.length} Items`;
+      }
+
+      container.innerHTML = '';
+      list.forEach((q) => {
+        const pill = document.createElement('button');
+        pill.className = 'nav-num-pill';
+        const userAnswer = APP_STATE.answers[q.id];
+
+        if (userAnswer !== undefined) {
+          if (userAnswer === q.answer) {
+            pill.classList.add('correct');
+          } else {
+            pill.classList.add('incorrect');
+          }
+        }
+        if (APP_STATE.bookmarks[q.id]) {
+          pill.classList.add('bookmarked');
+        }
+
+        pill.setAttribute('title', `Question ${q.num} (${q.year})`);
+        pill.innerHTML = `<span>Q${q.num}</span><span style="font-size: 0.65rem; opacity: 0.8;">'${q.year}</span>`;
+        pill.onclick = () => {
+          const targetEl = document.getElementById(`q-card-${q.id}`);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetEl.style.transition = 'transform 0.3s ease';
+            targetEl.style.transform = 'scale(1.02)';
+            setTimeout(() => { targetEl.style.transform = 'none'; }, 600);
+          }
+        };
+        container.appendChild(pill);
+      });
+    }
+
+    /* Render the questions */
+    function renderQuestions() {
+      const container = document.getElementById('question-list-container');
+      if (!container) return;
+
+      const list = getFilteredQuestions();
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state-card">
+            <div class="empty-icon">
+              <i data-lucide="check-circle" style="width: 48px; height: 48px; margin: 0 auto;"></i>
+            </div>
+            <h3 style="margin: 0 0 8px; font-weight: 800; font-size: 1.25rem;">No Questions Match This Filter</h3>
+            <p style="color: var(--on-surface-variant); max-width: 45ch; margin: 0 auto 16px;">
+              You have answered everything or there are no items under "${APP_STATE.filterMode}".
+            </p>
+            <button class="action-btn btn-primary-pop" onclick="resetFilterToAll()" style="margin: 0 auto;">
+              Show All Questions
+            </button>
+          </div>
+        `;
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+        return;
+      }
+
+      container.innerHTML = '';
+      list.forEach(q => {
+        const card = createQuestionCardElement(q);
+        container.appendChild(card);
+      });
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    function resetFilterToAll() {
+      APP_STATE.filterMode = 'all';
+      const select = document.getElementById('filter-status');
+      if (select) select.value = 'all';
+      renderNavigator();
+      renderQuestions();
+      persistState();
+    }
+
+    function createQuestionCardElement(q) {
+      const card = document.createElement('article');
+      card.className = 'question-card';
+      card.id = `q-card-${q.id}`;
+
+      const userAnswer = APP_STATE.answers[q.id];
+      const isBookmarked = !!APP_STATE.bookmarks[q.id];
+      const isRevealed = !!APP_STATE.revealedExp[q.id];
+
+      // Prepare speech text
+      let speechStem = q.stem.replace(/\[.*?\]/g, '').trim();
+      if (q.dialogue) speechStem += " " + q.dialogue;
+
+      card.innerHTML = `
+        <div class="q-meta-bar">
+          <div class="q-badge-stack">
+            <span class="chip-year">${q.year} Year (${Number(q.year) + 1911})</span>
+            <span class="chip-qnum">Reading Q${q.num}</span>
+            <span class="chip-topic">${q.category}</span>
+          </div>
+          <div class="q-actions">
+            <button class="icon-btn" onclick="speakText(\`${escapeQuotesForAttr(speechStem)}\`)" title="Listen to English Audio">
+              <i data-lucide="volume-2" style="width: 16px; height: 16px;"></i>
+            </button>
+            <button class="icon-btn ${isBookmarked ? 'active-star' : ''}" id="star-btn-${q.id}" onclick="toggleBookmark('${q.id}', event)" title="Star / Bookmark">
+              <i data-lucide="star" style="width: 16px; height: 16px;"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="q-stem-wrapper">
+          <div class="q-type-instruction">${q.type} (三選一選擇題)</div>
+          <p class="q-text">${escapeHtml(q.stem)}</p>
+        </div>
+
+        ${q.visualType ? `
+          <div class="prompt-box">
+            ${getVisualGraphic(q.visualType)}
+          </div>
+        ` : ''}
+
+        ${q.dialogue ? `
+          <div class="prompt-box" style="padding: 12px;">
+            <div class="dialogue-dialog">
+              ${q.dialogue.split('\n').map(line => {
+                const parts = line.split(':');
+                if (parts.length > 1) {
+                  return `<div style="margin-bottom: 6px;"><span class="dialogue-speaker">${escapeHtml(parts[0])}:</span><span>${escapeHtml(parts.slice(1).join(':'))}</span></div>`;
+                }
+                return `<div>${escapeHtml(line)}</div>`;
+              }).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="options-grid" id="options-${q.id}">
+          ${q.options.map((optText, idx) => {
+            const optIndex = idx + 1;
+            let optClass = "option-btn";
+            let stateBadge = "";
+
+            if (userAnswer !== undefined) {
+              if (optIndex === userAnswer) {
+                optClass += " selected";
+              }
+              // Show correct/incorrect styles if instant feedback is ON or if answered
+              if (APP_STATE.instantFeedback) {
+                if (optIndex === q.answer) {
+                  optClass += " correct-state";
+                  stateBadge = `<span style="font-size: 0.8rem; font-weight: 800; color: var(--positive); display: flex; align-items: center; gap: 4px;"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Correct</span>`;
+                } else if (optIndex === userAnswer) {
+                  optClass += " incorrect-state";
+                  stateBadge = `<span style="font-size: 0.8rem; font-weight: 800; color: var(--error); display: flex; align-items: center; gap: 4px;"><i data-lucide="x" style="width: 14px; height: 14px;"></i> Incorrect</span>`;
+                }
+              }
+            }
+
+            return `
+              <button class="${optClass}" onclick="selectOption('${q.id}', ${optIndex})">
+                <span class="opt-badge">(${optIndex})</span>
+                <span class="opt-content">
+                  <span>${escapeHtml(optText.replace(/^\(\d\)\s*/, ''))}</span>
+                  ${stateBadge}
+                </span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+          <button class="action-btn btn-secondary" onclick="toggleExplanation('${q.id}')" style="padding: 4px 12px; font-size: 0.8rem;">
+            <i data-lucide="help-circle" style="width: 14px; height: 14px;"></i>
+            <span>${isRevealed ? 'Hide Analysis' : 'Show Explanation / 解析'}</span>
+          </button>
+          ${userAnswer !== undefined ? `
+            <span style="font-size: 0.8rem; font-weight: 700; color: ${userAnswer === q.answer ? 'var(--positive)' : 'var(--error)'};">
+              ${userAnswer === q.answer ? '✓ Answered Correctly' : '✗ Incorrect (Review Below)'}
+            </span>
+          ` : '<span style="font-size: 0.8rem; color: var(--on-surface-variant);">Not answered yet</span>'}
+        </div>
+
+        <div class="explanation-panel ${isRevealed ? 'visible' : ''}" id="exp-${q.id}">
+          <div class="exp-header">
+            <i data-lucide="lightbulb" style="width: 16px; height: 16px;"></i>
+            <span>Detailed Explanation & Competency Standard</span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-row"><span class="exp-key">Official Answer:</span> Option (${q.answer})</div>
+            <div class="exp-row"><span class="exp-key">Competency Category:</span> ${q.category} (${q.type})</div>
+            <div class="exp-row" style="margin-top: 6px;"><span class="exp-key">Explanation:</span> ${escapeHtml(q.explanation)}</div>
+          </div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    function renderSingleQuestionUI(qid) {
+      const q = QUESTION_BANK.find(item => item.id === qid);
+      if (!q) return;
+      const oldCard = document.getElementById(`q-card-${qid}`);
+      if (!oldCard) return;
+      const newCard = createQuestionCardElement(q);
+      oldCard.replaceWith(newCard);
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    /* Update Top Score Strip */
+    function updateStatistics() {
+      const targetQuestions = getYearQuestions(APP_STATE.selectedYear);
+      const total = targetQuestions.length;
+      let answeredCount = 0;
+      let correctCount = 0;
+
+      targetQuestions.forEach(q => {
+        const u = APP_STATE.answers[q.id];
+        if (u !== undefined) {
+          answeredCount++;
+          if (u === q.answer) correctCount++;
+        }
+      });
+
+      const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+      const passRate = Math.round((correctCount / total) * 100);
+
+      // Score
+      const scoreEl = document.getElementById('stat-score');
+      if (scoreEl) scoreEl.textContent = `${correctCount} / ${total}`;
+
+      const accuracyEl = document.getElementById('stat-accuracy');
+      if (accuracyEl) accuracyEl.textContent = `${accuracy}% accuracy`;
+
+      // Completed
+      const completedEl = document.getElementById('stat-completed');
+      if (completedEl) completedEl.textContent = `${answeredCount} / ${total}`;
+
+      const remainingEl = document.getElementById('stat-remaining');
+      if (remainingEl) remainingEl.textContent = `${total - answeredCount} questions left`;
+
+      // Benchmark indicator (MoE Taiwan remedial standard is ~60% passing threshold)
+      const benchmarkEl = document.getElementById('stat-benchmark');
+      if (benchmarkEl) {
+        if (answeredCount === 0) {
+          benchmarkEl.textContent = "Start Quiz";
+          benchmarkEl.style.color = "var(--on-surface)";
+        } else if (passRate >= 80) {
+          benchmarkEl.textContent = "Mastered (精熟)";
+          benchmarkEl.style.color = "var(--positive)";
+        } else if (passRate >= 60) {
+          benchmarkEl.textContent = "Passed (通過)";
+          benchmarkEl.style.color = "var(--tertiary)";
+        } else {
+          benchmarkEl.textContent = "Needs Help (需扶助)";
+          benchmarkEl.style.color = "var(--error)";
+        }
+      }
+
+      // Starred
+      let totalStarred = 0;
+      Object.keys(APP_STATE.bookmarks).forEach(k => {
+        if (APP_STATE.bookmarks[k]) totalStarred++;
+      });
+      const starEl = document.getElementById('stat-starred');
+      if (starEl) starEl.textContent = totalStarred.toString();
+    }
+
+    /* Helper utility escaping */
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function escapeQuotesForAttr(str) {
+      if (!str) return '';
+      return String(str).replace(/"/g, '&quot;').replace(/'/g, "\\'").replace(/\n/g, ' ');
+    }
+
+    // Startup
+    window.addEventListener('DOMContentLoaded', () => {
+      initPersistence();
+    });
+  </script>
+</body>
+</html>
